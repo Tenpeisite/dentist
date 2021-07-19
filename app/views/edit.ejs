@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>编辑用户</title>
+    <style>
+    .myButton {
+    -moz-box-shadow: 0px 0px 0px 0px #a4e271;
+    -webkit-box-shadow: 0px 0px 0px 0px #a4e271;
+    box-shadow: 0px 0px 0px 0px #a4e271;
+    background-color:#89c403;
+    -moz-border-radius:28px;
+    -webkit-border-radius:28px;
+    border-radius:28px;
+    border:1px solid #74b807;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:17px;
+    padding: 3px 71px;
+    margin-top: 10px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #528009;
+    }
+    .myButton:hover {
+        background-color:#77a809;
+    }
+    .myButton:active {
+        position:relative;
+        top:1px;
+    }
+    input{
+        border: 1px solid #cae;
+        color:rgb(10, 10, 10);
+        width: 300px;
+        height: 30px;
+    }
+    hr{
+        border:1px solid #cea;
+    }
+    h3{
+        text-shadow: 5px 5px 5px #FF0000;
+    }
+    fieldset{
+	margin-left: 500px;
+    margin-right: 500px;
+    margin-top: 150px;
+    border-radius:25px;
+    
+	}	
+    </style>
+</head>
+
+<body>
+    <form class="form-horizontal" action="/edit" method="post" >
+        <fieldset>
+            <div id="legend" class="">
+                <legend class="leipiplugins-orgvalue"><h3>编辑用户</h3></legend>
+                <hr>
+            </div>
+            <div class="control-group">
+                <!-- Text -->
+                <div class="controls">
+                    <input type="hidden" name="name" value="<%=datas[0].name%>">
+                    <input type="hidden" name="id" value="<%=datas[0].id%>">
+                    <input name="employNumber" type="hidden"  value="<%=datas[0].employNumber%>" class="leipiplugins" leipiplugins="text">
+                    <input name="sex" type="hidden"  value="<%=datas[0].sex%>" class="leipiplugins" leipiplugins="text">
+                    <input name="yearOfBirth" type="hidden"  value="<%=datas[0].yearOfBirth%>" class="leipiplugins" leipiplugins="text">
+                    <input name="monthOfBirth" type="hidden"  value="<%=datas[0].monthOfBirth%>" class="leipiplugins" leipiplugins="text">
+                    用户名：<%= datas[0].name %>
+                </div>
+            </div>
+            <br>
+            <div class="control-group">
+                <!-- Text -->
+                <div class="controls">
+                    密 码：<input name="password" type="text"  value="<%=datas[0].password%>" class="leipiplugins" leipiplugins="text">
+                    <br>
+                    职 务：<input name="职务" type="text"  value="<%=datas[0].title%>" class="leipiplugins" leipiplugins="text">
+                </div>
+            </div>
+             <input class="myButton" type="submit" value="提交">
+        </fieldset>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>添加用户</title>
+    <style>
+    .myButton {
+    -moz-box-shadow: 0px 0px 0px 0px #a4e271;
+    -webkit-box-shadow: 0px 0px 0px 0px #a4e271;
+    box-shadow: 0px 0px 0px 0px #a4e271;
+    background-color:#89c403;
+    -moz-border-radius:28px;
+    -webkit-border-radius:28px;
+    border-radius:28px;
+    border:1px solid #74b807;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:17px;
+    padding: 3px 71px;
+    margin-top: 10px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #528009;
+    }
+    .myButton:hover {
+        background-color:#77a809;
+    }
+    .myButton:active {
+        position:relative;
+        top:1px;
+    }
+    input{
+        border: 1px solid #cae;
+        color:rgb(20, 20, 20);
+        width: 300px;
+        height: 30px;
+    }
+    hr{
+        border:1px solid #cea;
+    }
+    h3{
+        text-shadow: 5px 5px 5px #FF0000;
+    }
+    fieldset{
+	margin-left: 500px;
+    margin-right: 500px;
+    margin-top: 150px;
+    border-radius:25px;
+    
+	}	
+    </style>
+        <script type="text/javascript" src="/static/js/mima.js"></script>
+</head>
+
+<body>
+    <form class="form-horizontal" action="/add" method="post">
+        <fieldset>
+            <div id="legend" class="">
+                <legend class="leipiplugins-orgvalue"><h3>添加用户</h3></legend>
+                <hr>
+            </div>
+            <div class="control-group">
+                <!-- Text -->
+                <div class="controls">
+                    <input name="name" type="text" placeholder="请输入您的姓名" title="姓名" value="" class="leipiplugins" leipiplugins="text">
+                </div>
+            </div>
+            <br>
+            <div class="control-group">
+                <!-- Text -->
+                <div class="controls">
+                    <input name="password" id="npsw" type="password" placeholder="请输入您的密码" title="密码" required="required" onkeyup="validate()"\
+                    class="leipiplugins" leipiplugins="password">
+                </div>
+            </div>
+            <br>
+            <div class="control-group">
+                <!-- Text -->
+                <div class="controls">
+                    <input name="rpassword" id="rpsw" type="password" placeholder="请再输入您的密码" title="密码" required="required" onkeyup="validate()" \
+                   class="leipiplugins" leipiplugins="password"><span id="qpwtx"></span>
+                </div>
+            </div>
+            <br>
+            <div class="control-group">
+                <!-- Text -->
+                <div class="controls">
+                    <input name="工号" type="text" placeholder="请输入您的工号" title="工号" value="" class="leipiplugins" leipiplugins="text">
+                </div>
+            </div>
+            <br>
+            <div class="control-group">
+                <!-- Text -->
+                <div class="controls">
+                    <input name="sex" type="radio"  title="sex" value="男" class="leipiplugins" leipiplugins="text" style="width:20px;height:20px;"> 男
+                    <input name="sex" type="radio"  title="sex" value="女" class="leipiplugins" leipiplugins="text" style="width:20px;height:20px;"> 女
+                </div>
+            </div>
+            <br>
+            <div class="control-group">
+                <!-- Text -->
+                <div class="controls">
+                    <input name="职务" type="text" placeholder="请输入您的职务" title="sex" value="" class="leipiplugins" leipiplugins="text">
+                </div>
+            </div>
+            <br>
+            <div class="control-group">
+                <!-- Text -->
+                <div class="controls">
+                    <input name="出生年份" type="text" placeholder="请输入您的出生年份" title="出生年份" value="" class="leipiplugins" leipiplugins="text">
+                </div>
+            </div>
+            <br>
+            <div class="control-group">
+                <!-- Text -->
+                <div class="controls">
+                    <input name="出生月份" type="text" placeholder="请输入您的出生月份" title="出生月份" value="" class="leipiplugins" leipiplugins="text">
+                </div>
+            </div>
+            <input class="myButton" type="submit" value="提交">
+        </fieldset>
+    </form>
+</body>
+
+</html>
